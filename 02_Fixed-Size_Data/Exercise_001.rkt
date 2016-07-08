@@ -2,5 +2,7 @@
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname Exercise_001) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 ; constants
-(define x 3)
-(define y 4)
+(define x 12)
+(define y 5)
+
+(sqrt (+ (sqr x) (sqr y)))
