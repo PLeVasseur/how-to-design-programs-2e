@@ -5,8 +5,11 @@
 
 (require 2htdp/image)
 
-(overlay/xy
- (overlay/xy
-  (rectangle 10 40 "solid" "brown") 5 -8
-  (rotate -25 (rectangle 5 15 "solid" "brown"))) 0 0
- (rotate 25 (rectangle 5 15 "solid" "brown")))
+(place-image (ellipse 80 30 "solid" "green") 50 23 
+             (place-image (rotate -35
+                                  (rectangle 5 20 "solid" "brown")) 60 40
+                                                                    (place-image (rotate 35
+                                                                                         (rectangle 5 20 "solid" "brown")) 40 40 
+                                                                                                                           (place-image
+                                                                                                                            (rectangle 20 60 "solid" "brown") 50 70
+                                                                                                                            (empty-scene 100 100)))))
