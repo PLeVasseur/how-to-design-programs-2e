@@ -12,7 +12,13 @@
 (require 2htdp/image)
 
 ; constants
-(define in "hello")
+W
 
 ; functions
 
+(define (anything2number anything)
+  (cond
+      [(string? anything) (string-length anything)]
+      [(image? anything) (* (image-height anything) (image-width anything))]
+      [(number? anything) (if (> anything 0) (- anything 1) anything)]
+      [(boolean? anything) (if (and anything #true) 10 20)]))
